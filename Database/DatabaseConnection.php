@@ -4,7 +4,7 @@ class DataBaseConnection{
     private $server = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "Tech14";
+    private $database = "tg";
 
     function startConnection(){
         try{
