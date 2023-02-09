@@ -9,7 +9,7 @@ class DataBaseConnection{
     function startConnection(){
         try{
             //Koneksioni PDO-(PHP DATA OBJECT)
-            $conn = new PDO("mysql:host=$this->server; dbname=$this->database, $this->username, $this->password");
+            $conn = new PDO("mysql:host=$this->server; dbname=$this->database",$this->username, $this->password);
             //PDO error
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
