@@ -6,26 +6,25 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-<title>Login</title>
-<link rel="stylesheet" type="text/css" href="../Pages/./CSS/./Login.css">
+<head>
+<title>Register</title>
+<link rel="stylesheet" type="text/css" href="../Pages/./CSS/./Logiin.css">
     </head>
     <body>
-      <div class="overlay">
-        <div class="overlay-background"></div>
-        <div class="overlay-content">
-          <h1 class="main-heading" style="color: white";>Enter your Login information!</h1>
-          <form class="login-form"></form>
-          <label >Email Address:</label> 
-                <input id="emailL" class="emailL" placeholder="Email" type="email" /><br>
-                <label>Password:</label>
-                <input id="passwordL" class="passwordL" placeholder="Password" type="password" />
-
-
-                <input class="btn btn-outline login-btn" onclick="validateL()" value="Log In">
+        <div class="overlay">
+            <div class="overlay-background">
+            <div class="overlay-content">
+              <h1 class="main-heading" style="color: white;">Enter your Login information!</h1>
+              <form method="post">
+              
+                  <input type="email" name="email" placeholder="Email..."><br><br>
+                  <input type="password" name="password" placeholder="Password..."><br><br>
+                  <input type="submit" name="submit" value="Log In">
               </form>
+                </form>
             </div>
           </div>
+        </div>
 
           <center> 
             <div id="footer">
@@ -34,7 +33,11 @@
             <a href="https://www.tiktok.com/foryou?is_copy_url=1&is_from_webapp=v1"><img src="../Pages/./Images/./tiktok.png" class="copyright"></a>
             </div>
          </center>
+      
+         <script src="../JS/./Validimi.js"></script>
 
-          <script src="../JS/./Validimi.js"></script>
-        </body>
+        <?php
+            include_once '../Controllers/loginController.php';
+        ?>
+    </body>
 </html>
